@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pTN-0i-Q2p">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="NEu-9H-H3S">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="pTN-0i-Q2p" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g5b-5g-tjn"/>
+                        <viewControllerLayoutGuide type="bottom" id="b1b-3E-oQh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gew-6N-RRG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aY3-6b-3K2" customClass="WWTagView">
+                                <rect key="frame" x="138" y="284" width="100" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="O1U-TG-5VY"/>
+                                    <constraint firstAttribute="width" constant="100" id="X6q-bw-PVe"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-Vg-VDN">
+                                <rect key="frame" x="163" y="432" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="pTN-0i-Q2p" eventType="valueChanged" id="muw-zx-axC"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gOg-u6-bED">
+                                <rect key="frame" x="136" y="514" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="eeM-FC-Sh6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="pTN-0i-Q2p" eventType="valueChanged" id="7fZ-vY-RBl"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gOg-u6-bED" firstAttribute="top" secondItem="CYQ-Vg-VDN" secondAttribute="bottom" constant="51" id="8zX-bM-bZV"/>
+                            <constraint firstItem="aY3-6b-3K2" firstAttribute="centerY" secondItem="Gew-6N-RRG" secondAttribute="centerY" id="Klx-ym-4VN"/>
+                            <constraint firstItem="aY3-6b-3K2" firstAttribute="centerX" secondItem="Gew-6N-RRG" secondAttribute="centerX" id="QJz-bg-aQj"/>
+                            <constraint firstItem="gOg-u6-bED" firstAttribute="leading" secondItem="aY3-6b-3K2" secondAttribute="leading" id="ezf-Ho-rlR"/>
+                            <constraint firstItem="CYQ-Vg-VDN" firstAttribute="centerX" secondItem="aY3-6b-3K2" secondAttribute="centerX" id="jIq-zX-YNe"/>
+                            <constraint firstItem="CYQ-Vg-VDN" firstAttribute="top" secondItem="aY3-6b-3K2" secondAttribute="bottom" constant="48" id="pCe-V8-DMB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testVIew" destination="aY3-6b-3K2" id="buJ-nF-eHk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNd-tQ-qUu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
